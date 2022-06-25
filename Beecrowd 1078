@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s = new Scanner(System.in);
+        int entrada = s.nextInt();
+        int contador=1;
+        if (entrada>2&&entrada<100) {
+            for (int i; contador<=10; contador++) {
+                System.out.println( contador+" x "+entrada+" = "+entrada*contador);
+            }
+	    }
+	}
+}
