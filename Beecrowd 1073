@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int N = s.nextInt();
+		if(N>5&&N<2000){
+	    	for(int i =2; i<=N; i+=2){
+	    	    double quad = Math.pow(i,2);
+		        System.out.print(i);
+		        System.out.printf("^2 = %.0f\n", quad);
+		    }
+		}
+	}
+}
