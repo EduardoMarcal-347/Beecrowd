@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		String A = s.next();
+		String B = s.next();
+		String C = s.next();
+		if(A.equals("vertebrado")&&B.equals("ave")&&C.equals("carnivoro")){
+		    System.out.println("aguia");
+		    
+		} else if(A.equals("vertebrado")&&B.equals("ave")&&C.equals("onivoro")){
+		    System.out.println("pomba");
+		
+		} else if(A.equals("vertebrado")&&B.equals("mamifero")&&C.equals("onivoro")){
+		    System.out.println("homem");
+		    
+		} else if(A.equals("vertebrado")&&B.equals("mamifero")&&C.equals("herbivoro")){
+		    System.out.println("vaca");
+		    
+		} else if(A.equals("invertebrado")&&B.equals("inseto")&&C.equals("hematofago")){
+		    System.out.println("pulga");
+		    
+		} else if(A.equals("invertebrado")&&B.equals("inseto")&&C.equals("herbivoro")){
+		    System.out.println("lagarta");
+		    
+		} else if(A.equals("invertebrado")&&B.equals("anelideo")&&C.equals("hematofago")){
+		    System.out.println("sanguessuga");
+		    
+		} else if(A.equals("invertebrado")&&B.equals("anelideo")&&C.equals("onivoro"))
+		    System.out.println("minhoca");
+	}
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int cod=0;
+		int alc=0, gas=0, dies=0;
+		while (cod!=4) {
+		    cod = s.nextInt();
+		    switch(cod) {
+		        case 1:
+		            alc++;
+		            break;
+		        case 2:
+		            gas++;
+		            break;
+		        case 3:
+		            dies++;
+		            break;
+		        default:
+		            break;
+		    }
+		}
+		System.out.println("MUITO OBRIGADO\nAlcool: "+alc+ "\nGasolina: "+gas+"\nDiesel: "+dies);
+	}
+}
