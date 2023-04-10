@@ -11,7 +11,7 @@ Desenvolvimento de exercicios visando aperfeiçoar as habilidades de lógica em 
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - ``Java``
-- ``MySQL``
+- ``SQL``
 - ``Kotlin``
 
 ## 📁 Acesso ao projeto
