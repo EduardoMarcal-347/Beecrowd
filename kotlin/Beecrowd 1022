@@ -1,0 +1,61 @@
+
+fun main(args: Array<String>) {
+    val entrada :String? = readLine()
+    val elementos = entrada?.split(" ")!!
+        .filter{!it.contains("/")};
+    val (n1, d1, n2, d2) = elementos.mapIndexedNotNull() { index, element ->
+        when(index){
+            0,1,3,4 -> element.toInt();
+            else -> null;
+        }
+    };
+    val operator = elementos[2];
+    var maiorDivisor: Int;
+
+    var resultNumerador = when(operator.toString()) {
+        "+" -> (n1*d2 + n2*d1);
+        "-" -> (n1*d2 - n2*d1);
+        "*" -> (n1*n2);
+        "/" -> (n1*d2);
+        else -> null;
+    }
+
+    var resultDenominador = when(operator.toString()) {
+        "+", "-", "*" -> (d1*d2);
+        "/" -> (n2*d1);
+        else -> null;
+    }
+    maiorDivisor = mdc(resultNumerador,resultDenominador);
+
+    if(maiorDivisor!=1){
+        println("$resultNumerador/$resultDenominador = " +
+                "${minResult(resultNumerador, resultDenominador, maiorDivisor)}");
+    } else {
+        println("$resultNumerador/$resultDenominador");
+    }
+
+}
+
+fun minResult(num1: Int?, num2: Int?, mdc: Int?): String {
+    var n1 = num1!! / mdc!!;
+    var n2 = num2!! / mdc!!;
+
+    return "$n1/$n2";
+}
+
+fun mdc(a: Int?, b: Int?): Int {
+    var num1 = a;
+    var num2 = b;
+
+    if (num2 == 0) {
+        return 1 // Números são coprimos, MDC é 1
+    }
+
+    while (num2 != 0) {
+        val temp = num2
+        num2 = num1!! % num2!!
+        num1 = temp
+    }
+
+    return num1!!;
+}
